@@ -1,0 +1,270 @@
+/* Resetiranje stilova */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Osnovni stil za tijelo stranice */
+body {
+    background-image: linear-gradient(rgba(83, 28, 6, 0.943), rgba(65, 41, 13, 0.961)), url(../images/background.jpg);
+    background-size: cover; 
+    background-position: center; 
+    width: 100%;
+    height: 100vh; 
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+
+/* Stil za zaglavlje */
+header {
+    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.students_btn{
+    display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 6vh;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  background: none;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Barlow Condensed';
+}
+.classes_btn{
+    display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 6vh;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  background: none;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Barlow Condensed';
+}
+.subjects_btn{
+    display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 6vh;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  background: none;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Barlow Condensed';
+}
+
+.students_btn{
+    display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 6vh;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  background: none;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Barlow Condensed';
+}
+.classes_btn{
+    display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 6vh;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  background: none;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Barlow Condensed';
+}
+
+.subjects_btn{
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 6vh;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  background: none;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Barlow Condensed';
+}
+
+.home_btn{
+  display: flex;
+align-items: center;
+padding: 10px 20px;
+margin: 10px;
+font-size: 6vh;
+border: 0;
+outline: 0;
+border-radius: 5px;
+background: none;
+color: #fff;
+font-weight: 500;
+cursor: pointer;
+font-family: 'Barlow Condensed';
+}
+
+i.fa-solid.fa-circle-xmark {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 6vh;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  background: none;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Barlow Condensed';
+}
+
+.fas.fa-circle-xmark{
+color: #ffffff;
+font-size: 4.5vh;
+margin-top: 4vh;
+}
+
+.number_of_classes{
+  color: #fff;
+  font-size: 5vh;
+  margin-left: 2vh;
+}
+
+.number_of_directions{
+  color: #fff;
+  font-size: 5vh;
+  margin-left: 2vh;
+}
+
+.number_of_students{
+  color: #fff;
+  font-size: 5vh;
+  margin-left: 2vh;
+}
+
+.number_of_subjects{
+  color: #fff;
+  font-size: 5vh;
+  margin-left: 2vh;
+}
+
+.form_container{
+    text-align: center;
+    color: #fff;
+}
+
+.add_student_form {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add_student_form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.add_student_form input[type="text"],
+.add_student_form input[type="date"],
+.add_student_form input[type="email"],
+.add_student_form select {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.add_student_form select {
+    width: 100%;
+}
+
+.add_student_form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.add_student_form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Stil za footer */
+footer {
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Stil za linkove unutar footera */
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Stil za linkove unutar footer-a kada su na hover */
+footer a:hover {
+    text-decoration: underline;
+}
