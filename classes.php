@@ -27,6 +27,99 @@ if (isset($_SESSION['username'])) {
     </ul>
 </nav>
 <?php
+if (isset($_SESSION['success_add_class']) && $_SESSION['success_add_class'] === true) {
+    echo '
+    <script>
+        swal({
+            title: "Razred uspješno dodat!",
+            icon: "success",
+            showConfirmButton: true,
+            timer: 5000
+        });
+    </script>';
+    unset($_SESSION['success_add_class']);
+}
+?>
+
+<?php
+if (isset($_SESSION['success_update_class']) && $_SESSION['success_update_class'] === true) {
+    echo '
+    <script>
+        swal({
+            title: "Podatci uspiješno sačuvani!",
+            icon: "success",
+            showConfirmButton: true,
+            timer: 5000
+        });
+    </script>';
+    unset($_SESSION['success_update_class']);
+}
+?>
+    <div class="meni">
+        <button class="turn_form" onclick="toggleFormContainer()">Dodaj razred</button>
+        <button class="turn_table" onclick="toggleClassesTable()">Prikaži tabelu razreda</button>
+    </div>
+    
+<div class="form_container">
+        <h2 class="form_title">Dodavanje razreda</h2>
+        <form action="add_class.php" onsubmit="return submitForm()" method="POST" class="add_classes_form" id="addClassForm">
+        <i id="close_form" onclick="closeFormContainer()" class="fas fa-circle-xmark"></i>
+            <label for="class">Razred:</label>
+            <input type="text" id="class" name="class" required><br><br>
+
+            <label for="head_teacher">Ime razrednog:</label>
+            <input type="text" id="head_teacher" name="head_teacher" required><br><br>
+            
+            <label for="direction">Smjer:</label>
+            <input type="text" id="direction" name="direction" required><br><br>
+            
+            <label for="school_year">Školska godina(napisati u formatu "yyyy/yy"):</label>
+            <input type="text" id="school_year" name="school_year" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="e-mail" id="email" name="email" required><br><br>
+            <input type="submit" value="Dodaj razred">
+        </form>
+
+</div>
+
+<div class="number_classes">
+        <?php
+                include 'db_connect.php';
+
+                    // SQL upit za brojanje redova u tabeli 'school_class'
+                    $sql = "SELECT COUNT(*) AS num_classes FROM school_class";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+                        // Izvlačenje rezultata upita
+                        $row = $result->fetch_assoc();
+                        $num_classes = $row["num_classes"];
+
+                        // Ispis broja razreda unutar h1 taga
+                        echo "<h1 class='number_of_classes'>Broj učenika: $num_classes</h1>";
+                            } else {
+                                echo "Nema rezultata.";
+                            }
+        ?>
+</div>
+<div class="classes_table">
+    <i id="close_table" onclick="closeClassesTable()" class="fas fa-circle-xmark"></i>
+    <h1>Tabela razreda</h1>
+    <table class="classes_table">
+        <tr>
+      <th>Ime</th>
+      <th>Prezime</th>
+      <th>Datum rođenja</th>
+      <th>Razred</th>
+      <th>Adresa</th>
+      <th>Email</th>
+      <th>Akcije</th>
+    </tr>
+    <?php include 'get_classes.php'; ?>
+  </table>
+</div>
+<?php
 } else {
     // Ako korisnik nije prijavljen, uključite index_login.php
     include 'index_login.php';

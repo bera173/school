@@ -29,19 +29,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   
 
     // Provera da li su svi obavezni podaci uneti
-    if ($name && $surname && $birth_date && $address && $email && $class !== null) {
-        // Izvršavanje SQL upita
-        if ($stmt->execute()) {
-            echo "Učenik uspešno dodat.";
-        } else {
-            echo "Greška prilikom dodavanja učenika: " . $stmt->error;
-        }
+if ($name !== null && $surname !== null && $birth_date !== null && $address !== null && $email !== null && $class !== null) {
+    // Izvršavanje SQL upita
+    if ($stmt->execute()) {
+        $_SESSION['success_add_student'] = true;
+        header("Location: students.php");      
     } else {
-        echo "Nisu uneti svi obavezni podaci ili vrednost za 'id_class' je null.";
+        // Greška prilikom izvršavanja upita
+        header("Location: students.php?error=insert_error");
+        exit;
     }
-
-    // Zatvaranje konekcije
-    $stmt->close();
-    $conn->close();
-}
+} else {
+    // Nisu uneti svi obavezni podaci ili vrednost za 'id_class' je null, redirekcija na students.php
+    header("Location: students.php?error=missing_data");
+    exit;
+}}
 ?>
+

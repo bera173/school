@@ -1,4 +1,3 @@
-/* Resetiranje stilova */
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
@@ -204,99 +203,44 @@ margin-top: 4vh;
   align-items: baseline;
 }
 
-.turn_form {
-  display: block;
-  padding: 10px 20px;
-  margin-left: 5vh;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.turn_form:hover {
-  background-color: #0056b3;
-}
-
-.turn_table {
-  display: block;
-  padding: 10px 20px;
-  margin-left: 5vh;
-  margin-top: 5vh;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.turn_table:hover {
-  background-color: #0056b3;
-}
-
-#close_form {
-  color: #333;
-  margin-left: 50vh;
-}
-
-#close_form:hover {
-  color: #333;
-  margin-left: 50vh;
-  cursor: pointer;
-}
-
-.form_container {
-  text-align: center;
-  color: #fff;
-  display: none;
-}
-
-.form_container.show {
-  display: block;
-}
-
-.hide {
-  display: none; /* Dodajemo klasu "hide" kako bismo sakrili gumb */
-}
-
-.add_student_form {
-    width: 300px;
-    margin: 20px auto;
+/* Stilizacija forme */
+form {
+    max-width: 400px;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.add_student_form label {
-    display: block;
-    margin-bottom: 5px;
+/* Stilizacija naslova forme */
+form h2 {
+    margin-bottom: 20px;
+    text-align: center;
     color: #333;
 }
 
-.add_student_form input[type="text"],
-.add_student_form input[type="date"],
-.add_student_form select,
-.add_student_form input[type="e-mail"] {
-    width: calc(100% - 10px);
-    padding: 8px;
-    margin-bottom: 10px;
+/* Stilizacija labele */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Stilizacija input polja */
+input[type="text"],
+input[type="email"],
+input[type="date"]
+ {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 3px;
 }
 
-.add_student_form input[type="email"]:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-.add_student_form select {
-    width: 100%;
-}
-
-.add_student_form input[type="submit"] {
+/* Stilizacija gumba za slanje */
+input[type="submit"] {
     width: 100%;
     padding: 10px;
     background-color: #007bff;
@@ -306,70 +250,9 @@ margin-top: 4vh;
     cursor: pointer;
 }
 
-.add_student_form input[type="submit"]:hover {
+/* Stilizacija gumba za slanje na hover */
+input[type="submit"]:hover {
     background-color: #0056b3;
-}
-
-.students_table {
-  display: none;
-}
-
-#close_table {
-  display: flex;
-  justify-content: flex-end; 
-  color: #fff;
-  cursor: pointer;
-  width: fit-content; 
-  margin-left: 5vh;
-}
-
-
-.students_table h1{
-  color: #fff;
-  text-align: center;
-  margin-top: 4vh;
-  margin-bottom: 5vh;
-}
-
-.student_table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.student_table th, .student_table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-.student_table th {
-  background-color: #f2f2f2;
-  text-align: left;
-}
-
-.student_table td {
-  background-color: #f2f2f2;
-  text-align: left;
-}
-
-
-
-.student_table td a {
-  text-decoration: none;
-  color: blue;
-  margin-right: 5px;
-}
-
-.student_table td button.delete_button {
-  padding: 5px 10px;
-  background-color: #f44336;
-  color: white;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.student_table td button.delete_button:hover {
-  background-color: #cc0000;
 }
 
 
